@@ -1,36 +1,102 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Exclusive - Next.js E-Commerce Project
+
+## Overview
+**Exclusive** is a modern, high-performance e-commerce web application built with [Next.js](https://nextjs.org/). It leverages advanced tools and libraries like Tailwind CSS, Redux Toolkit, MongoDB, and more to provide a seamless shopping experience. The platform includes robust user authentication, a dynamic product catalog, and a fully responsive design.
+
+## Features
+- **Modern UI:** Intuitive, clean, and responsive user interface designed with Tailwind CSS.
+- **Authentication:** Secure user authentication using `next-auth` with JWT support.
+- **State Management:** Efficient and scalable state management powered by Redux Toolkit.
+- **Database Integration:** Product and user data managed with MongoDB and Mongoose.
+- **Forms:** User-friendly forms powered by `react-hook-form` and Zod for validation.
+- **Radix UI Components:** Enhanced interactivity with accessible UI components.
+- **API Endpoints:** RESTful API endpoints for data operations and seeding.
+- **Performance:** Optimized for performance and SEO using Next.js capabilities.
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+Ensure you have the following installed:
+- [Node.js](https://nodejs.org/) (v18 or later)
+- [MongoDB](https://www.mongodb.com/)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+### Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/exclusive.git
+   cd exclusive
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+### Environment Variables
+Create a `.env.local` file in the root directory and configure the following variables:
+```env
+DATABASE_URL=mongodb+srv://<username>:<password>@cluster.mongodb.net/exclusive
+NEXTAUTH_SECRET=your_secret_key
+NEXTAUTH_URL=http://localhost:3000
+JWT_SECRET=your_jwt_secret
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Running the Project
+- Start the development server:
+  ```bash
+  npm run dev
+  ```
+- Build the application:
+  ```bash
+  npm run build
+  npm start
+  ```
+- Seed the database:
+  ```bash
+  npm run seed
+  ```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Folder Structure
+```
+exclusive/
+├── public/           # Static assets
+├── src/
+│   ├── app/          # Next.js app directory
+│   ├── components/   # Reusable components
+│   ├── features/     # Redux features
+│   ├── hooks/        # Custom hooks
+│   ├── lib/          # Utilities and helpers
+│   ├── pages/        # API routes and page components
+│   ├── styles/       # Global styles
+│   └── utils/        # Helper functions
+└── package.json      # Project dependencies and scripts
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Technologies Used
+- **Frontend:** Next.js, React, Tailwind CSS, Radix UI
+- **State Management:** Redux Toolkit
+- **Backend:** MongoDB, Mongoose, Next.js API Routes
+- **Authentication:** NextAuth.js
+- **Validation:** Zod, react-hook-form
+- **Icons:** Lucide React
 
-## Learn More
+## Scripts
+| Script       | Description                             |
+|--------------|-----------------------------------------|
+| `npm run dev` | Starts the development server          |
+| `npm run build` | Builds the application for production |
+| `npm start`   | Runs the production build              |
+| `npm run lint` | Lints the codebase                    |
+| `npm run seed` | Seeds the database                    |
 
-To learn more about Next.js, take a look at the following resources:
+## License
+This project is licensed under the MIT License. See the LICENSE file for details.
 
--   [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
--   [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Contributions
+Contributions are welcome! Please fork the repository and submit a pull request.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Contact
+For questions or support, reach out to [devmanish2810@gmail.com].
 
-## Deploy on Vercel
+#Thank you
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
